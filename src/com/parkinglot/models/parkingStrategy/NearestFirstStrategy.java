@@ -31,6 +31,7 @@ public class NearestFirstStrategy implements ParkingStrategy {
                 ps.setOccupied(true);
             }
         }
+        System.out.println("Parking spot assigned with nearest first strategy");
         return parkingSpot;
     }
 

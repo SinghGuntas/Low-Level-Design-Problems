@@ -44,6 +44,7 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     private ParkingSpot assignParkingSpot(Vehichle vehichle) throws ParkingSpotUnavailableException, VehichleNotSupportedException {
+        System.out.println("Assigning parking spot to vehicle " + vehichle.getId());
         switch (vehichle.getVehicleType()) {
             case CAR:
             case AUTO:

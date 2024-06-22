@@ -4,9 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class ParkingSpot {
 
-    private final AtomicInteger atomicInteger = new AtomicInteger(0);
-
     public ParkingSpot() {
+        AtomicInteger atomicInteger = new AtomicInteger(0);
         this.id = String.valueOf(atomicInteger.incrementAndGet());
     }
 
@@ -16,9 +15,6 @@ public abstract class ParkingSpot {
 
     private final String id;
     private boolean isOccupied;
-    int cost;
-
-    public abstract int cost();
 
     public boolean isOccupied() {
         return isOccupied;
@@ -27,4 +23,6 @@ public abstract class ParkingSpot {
     public void setOccupied(boolean occupied) {
         isOccupied = occupied;
     }
+
+    public abstract int cost(int parkingHours);
 }

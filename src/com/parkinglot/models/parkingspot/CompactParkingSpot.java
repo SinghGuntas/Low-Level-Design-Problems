@@ -5,8 +5,9 @@ public class CompactParkingSpot extends ParkingSpot {
         super();
     }
 
+
     @Override
-    public int cost() {
-        return 0;
+    public int cost(int parkingHours) {
+        return parkingHours * 20;
     }
 }

@@ -9,7 +9,12 @@ public class Ticket {
 
     private final int id;
     private final AtomicInteger atomicInteger = new AtomicInteger();
-    private final ParkingSpot parkingSpot;
+    private ParkingSpot parkingSpot;
+
+    public void setParkingSpot(ParkingSpot parkingSpot) {
+        this.parkingSpot = parkingSpot;
+    }
+
     private final Vehichle vehichle;
     private final LocalDateTime createdAt;
 
