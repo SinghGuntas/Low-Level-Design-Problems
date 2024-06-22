@@ -1,0 +1,1 @@
+This repository contains Code for different LLD questions. Have tried to use design patterns wherever possible. 
